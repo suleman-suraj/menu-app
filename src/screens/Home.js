@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { AuthContext } from "../contexts/auth.context";
+import Header from "../components/Header";
 
 function Home() {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
-      <div>
-          Lorem ipsum dolor sit amet.
-    </div>
+      <section>
+          <Header/>
+    </section>
   )
 }
 
